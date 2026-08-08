@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3B Dental | Odontología al precio justo</title>
-    <!-- Tailwind CSS para los estilos -->
+    <title>¡Gracias por tu registro! | 3B Dental</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Montserrat (Títulos) y Open Sans (Cuerpo) según manual de marca -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ========================================== -->
+    <!-- PEGA TU CÓDIGO DE GOOGLE ADS (gtag) AQUÍ -->
+    <!-- ========================================== -->
+    
     <script>
         tailwind.config = {
             theme: {
@@ -21,25 +22,17 @@
                         heading: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#0D47A1', // Azul corporativo
-                        secondary: '#42A5F5', // Azul Claro
-                        accent: '#FB8C00', // Naranja
-                        accentHover: '#E65100', // Naranja oscuro para hover
-                        grayBrand: '#90A4AE', // Gris corporativo
-                        light: '#F4F9FF', // Fondo suave azulado
-                        whatsapp: '#25D366', // Verde WhatsApp
+                        primary: '#0D47A1',
+                        secondary: '#42A5F5',
+                        accent: '#FB8C00',
+                        light: '#F4F9FF',
+                        whatsapp: '#25D366',
                     }
                 }
             }
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        .hero-pattern {
-            background-color: #F4F9FF;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2342A5F5' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        /* Estilo para simular la sonrisa del logo */
         .smile-curve {
             border-bottom-left-radius: 50%;
             border-bottom-right-radius: 50%;
@@ -52,505 +45,69 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 antialiased bg-gray-50">
+<body class="font-sans text-gray-800 antialiased bg-light min-h-screen flex flex-col">
 
-    <!-- Navegación -->
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-24">
-                <div class="flex items-center">
-                    <!-- Logo 3B Dental rediseñado según manual -->
-                    <a href="#" class="flex flex-col justify-center items-center">
-                        <div class="flex items-baseline gap-[2px]">
-                            <span class="font-heading font-extrabold text-5xl text-secondary leading-none">3</span>
-                            <span class="font-heading font-extrabold text-5xl text-accent leading-none">B</span>
-                        </div>
-                        <div class="smile-curve w-3/4 mb-1"></div>
-                        <span class="font-heading font-bold text-2xl text-primary tracking-tight leading-none mt-1">DENTAL</span>
-                        <span class="text-[0.5rem] font-sans text-primary tracking-widest leading-none uppercase mt-1 font-semibold">Odontología al precio justo</span>
-                    </a>
+    <!-- Navegación Simple -->
+    <nav class="bg-white shadow-sm w-full py-4">
+        <div class="max-w-7xl mx-auto px-4 flex justify-center">
+            <a href="index.html" class="flex flex-col justify-center items-center">
+                <div class="flex items-baseline gap-[2px]">
+                    <span class="font-heading font-extrabold text-4xl text-secondary leading-none">3</span>
+                    <span class="font-heading font-extrabold text-4xl text-accent leading-none">B</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#inicio" class="text-gray-600 hover:text-accent font-semibold transition">Inicio</a>
-                    <a href="#nosotros" class="text-gray-600 hover:text-accent font-semibold transition">Nosotros</a>
-                    <a href="#servicios" class="text-gray-600 hover:text-accent font-semibold transition">Servicios</a>
-                    <a href="#blog" class="text-gray-600 hover:text-accent font-semibold transition">Blog</a>
-                    <a href="#citas" class="bg-accent hover:bg-accentHover text-white px-6 py-2.5 rounded-full font-heading font-bold transition shadow-lg flex items-center gap-2">
-                        <i class="fa-regular fa-calendar-check"></i> Agendar Cita
-                    </a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-primary hover:text-accent focus:outline-none">
-                        <i class="fa-solid fa-bars text-3xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <a href="#inicio" class="block px-4 py-3 text-gray-600 font-semibold hover:bg-light hover:text-primary">Inicio</a>
-            <a href="#nosotros" class="block px-4 py-3 text-gray-600 font-semibold hover:bg-light hover:text-primary">Nosotros</a>
-            <a href="#servicios" class="block px-4 py-3 text-gray-600 font-semibold hover:bg-light hover:text-primary">Servicios</a>
-            <a href="#blog" class="block px-4 py-3 text-gray-600 font-semibold hover:bg-light hover:text-primary">Blog</a>
-            <a href="#citas" class="block px-4 py-4 bg-accent text-white font-heading font-bold text-center text-lg">Agendar Cita</a>
+                <div class="smile-curve w-3/4 mb-1"></div>
+                <span class="font-heading font-bold text-xl text-primary tracking-tight leading-none mt-1">DENTAL</span>
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24 hero-pattern overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <span class="inline-block py-1.5 px-4 rounded-full bg-secondary/10 text-primary font-bold text-sm mb-4 border border-secondary/20">
-                        ¡Sonrisa perfecta a precio justo!
-                    </span>
-                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-primary">
-                        Tu sonrisa, <br><span class="text-accent">Nuestra prioridad</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 max-w-lg font-medium">
-                        Atención profesional, moderna y cercana para ti y toda tu familia. Olvídate del miedo al dentista con nuestra atención rápida, amable y al alcance de tu bolsillo.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#citas" class="bg-accent hover:bg-accentHover text-white text-center px-8 py-4 rounded-full font-heading font-bold transition shadow-lg text-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calendar-plus"></i> Registrar Consulta
-                        </a>
-                        <a href="#servicios" class="bg-white hover:bg-gray-50 text-primary text-center px-8 py-4 rounded-full font-heading font-bold transition shadow border-2 border-primary/10 text-lg">
-                            Ver Tratamientos
-                        </a>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2 relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-secondary to-primary rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                    <!-- Representación de atención amable (Sonrisín spirit) -->
-                    <img src="consultorio.png" alt="Paciente sonriendo en el dentista" class="relative rounded-3xl shadow-2xl object-cover h-[400px] w-full border-4 border-white">
-                    
-                    <!-- Floating Badge -->
-                    <div class="absolute bottom-6 left-[-20px] bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-gray-100 z-30">
-                        <div class="bg-accent/10 p-3 rounded-full text-accent">
-                            <i class="fa-solid fa-shield-halved text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-grayBrand font-bold uppercase">Garantía</p>
-                            <p class="text-sm font-heading font-bold text-primary">Precios sin sorpresas</p>
-                        </div>
-                    </div>
-                    
-                    <!-- NUEVO: Mascota Flotante dando la bienvenida -->
-                    <div class="absolute -bottom-10 -right-6 md:-right-12 w-36 md:w-48 z-40">
-                        <!-- REEMPLAZAR SRC: Aquí debes colocar el enlace a tu imagen sin fondo de la mascota -->
-                        <img src="mascota.png" alt="Mascota Sonrisín dando la bienvenida" class="w-32 h-auto drop-shadow-2xl hover:scale-110 hover:-rotate-3 transition-transform duration-300">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Contenido Principal -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-white max-w-2xl w-full rounded-3xl shadow-xl border border-gray-100 p-8 md:p-16 text-center relative overflow-hidden">
+            <!-- Confeti o decoración de fondo -->
+            <div class="absolute -top-10 -right-10 text-secondary opacity-10 text-9xl"><i class="fa-solid fa-tooth"></i></div>
+            <div class="absolute -bottom-10 -left-10 text-accent opacity-10 text-9xl"><i class="fa-solid fa-star"></i></div>
 
-    <!-- Nosotros / Misión y Visión -->
-    <section id="nosotros" class="py-20 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- CAMBIAR IMAGEN DE LA MASCOTA AQUÍ: Reemplaza el src="https..." por la ruta de tu imagen sin fondo -->
+            <div class="absolute bottom-0 right-4 w-24 md:w-32 opacity-90 pointer-events-none z-0">
+                <img src="mascota.png" alt="Mascota Sonrisín" class="w-full h-auto drop-shadow-md">
+            </div>
+
+            <!-- Icono de Éxito -->
+            <div class="relative z-10 w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-5xl mx-auto mb-8 shadow-sm">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h1 class="relative z-10 font-heading text-3xl md:text-4xl font-extrabold text-primary mb-4">¡Gracias por agendar con nosotros!</h1>
+            <p class="relative z-10 text-lg text-gray-600 mb-8 font-medium">Hemos recibido tus datos correctamente. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en breve para confirmar tu horario.</p>
             
-            <!-- NUEVO: Presentación de Sonrisín con espacio para su imagen completa -->
-            <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
-                <div class="md:w-2/3 text-center md:text-left">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Conoce a 3B Dental y a <span class="text-accent">BiBi</span></h2>
-                    <div class="w-24 h-1.5 bg-accent mx-auto md:mx-0 rounded-full"></div>
-                    <p class="mt-6 text-gray-600 text-lg font-medium leading-relaxed">
-                        Nuestro compañero de cuatro patas, <strong>BíBi</strong>, está aquí para asegurarse de que tu visita sea libre de estrés. Creemos que cuidar tu salud bucal debe ser una experiencia amigable, alegre y cercana. Con él a nuestro lado, garantizamos que grandes y chicos pierdan el temor al dentista.
-                    </p>
-                </div>
-                <div class="md:w-1/3 flex justify-center relative">
-                    <!-- Brillo de fondo para resaltar a la mascota -->
-                    <div class="absolute inset-0 bg-secondary/15 rounded-full blur-3xl scale-125"></div>
-                    <!-- REEMPLAZAR SRC: Aquí debes colocar tu imagen de Sonrisín de cuerpo entero -->
-                    <img src="mascota.png" alt="BíBi, la mascota de 3B Dental" class="relative z-10 w-56 md:w-64 object-contain drop-shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                </div>
+            <div class="relative z-10 bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-8 text-left inline-block w-full max-w-md mx-auto">
+                <h3 class="font-heading font-bold text-primary mb-2 flex items-center gap-2"><i class="fa-solid fa-circle-info text-secondary"></i> ¿Qué sigue ahora?</h3>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li><strong>1.</strong> Si se abrió WhatsApp, envíanos el mensaje predeterminado.</li>
+                    <li><strong>2.</strong> Nuestra recepcionista te responderá lo más rápido posible.</li>
+                    <li><strong>3.</strong> ¡Prepárate para recibir la mejor atención con Sonrisín!</li>
+                </ul>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Misión -->
-                <div class="bg-light p-10 rounded-3xl shadow-sm border border-secondary/20 hover:shadow-md transition relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition duration-500">
-                        <i class="fa-solid fa-tooth text-9xl text-primary"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg">
-                            <i class="fa-solid fa-bullseye"></i>
-                        </div>
-                        <h3 class="font-heading text-2xl font-bold text-primary mb-4">Nuestra Misión</h3>
-                        <p class="text-gray-600 leading-relaxed font-medium">
-                            Brindar atención odontológica de calidad mediante personalizacióndel tratamiento, trato humano y precios justos. Asegurando que cada paciente reciba atención rápida y sin demoras desde el primer contacto.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Visión -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-grayBrand/30 hover:shadow-md transition relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition duration-500">
-                        <i class="fa-regular fa-eye text-9xl text-grayBrand"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 bg-secondary text-white rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
-                        <h3 class="font-heading text-2xl font-bold text-primary mb-4">Nuestra Visión</h3>
-                        <p class="text-gray-600 leading-relaxed font-medium">
-                            Convertirnos en una clínica reconocida por la personalizacionn, la confianza y la excelencia en la atención odontológica. Acompañando a las familias de Lima en cada etapa de su salud bucal.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Valores -->
-            <div class="mt-16 pt-12 border-t border-gray-100 grid grid-cols-2 md:grid-cols-6 gap-6 text-center">
-                <div><i class="fa-solid fa-handshake text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Honestidad</p></div>
-                <div><i class="fa-solid fa-users text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Cercanía</p></div>
-                <div><i class="fa-solid fa-user-doctor text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Profesionalismo</p></div>
-                <div><i class="fa-solid fa-lightbulb text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Innovación</p></div>
-                <div><i class="fa-solid fa-heart text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Compromiso</p></div>
-                <div><i class="fa-solid fa-face-smile text-3xl text-secondary mb-2"></i><p class="font-heading font-bold text-sm text-primary">Empatía</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios y Precios -->
-    <section id="servicios" class="py-20 bg-gray-50 border-y border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">Soluciones Económicas</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Nuestros Tratamientos</h2>
-                <div class="w-24 h-1.5 bg-secondary mx-auto rounded-full"></div>
-                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg font-medium">
-                    Precios transparentes y justos para toda la familia. Consulta y diagnóstico integral.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="limpieza.png" alt="Limpieza Dental" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-accent text-white font-heading font-bold px-4 py-1.5 rounded-full shadow">¡Promoción!</div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-primary leading-tight">Limpieza Dental Profunda (Profilaxis)</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Limpieza profesional exhaustiva para eliminar sarro, placa bacteriana y manchas. Previene caries y enfermedades.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-heading font-extrabold text-accent">¡Sólo S/ 100!</span>
-                            <a href="#citas" class="text-primary hover:text-accent font-bold transition"><i class="fa-solid fa-arrow-right text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Servicio 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="resina.jpg" alt="Curaciones con resina" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-primary leading-tight">Curaciones y Resinas Estéticas</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Restauraciones duraderas y de color dental de alta calidad para dientes dañados o cariados. Materiales de primera.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-heading font-extrabold text-accent">Desde S/ 50</span>
-                            <a href="#citas" class="text-primary hover:text-accent font-bold transition"><i class="fa-solid fa-arrow-right text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Servicio 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="especialidades.png" alt="Extracciones dentales" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-heading text-xl font-bold text-primary leading-tight">Extracciones Simples y Demás Tratamientos</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6">Procedimientos seguros y sin dolor para retirar piezas dentales dañadas irremediablemente. Atención de urgencias.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xl font-heading font-bold text-grayBrand">Previa Evaluación</span>
-                            <a href="#citas" class="text-primary hover:text-accent font-bold transition"><i class="fa-solid fa-arrow-right text-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <a href="#citas" class="inline-flex items-center gap-2 font-heading font-bold text-primary hover:text-secondary transition">
-                    Contamos con diversas Especialidades <i class="fa-solid fa-circle-chevron-right"></i>
+            <div class="relative z-10">
+                <p class="text-sm text-gray-500 mb-4">¿No se abrió WhatsApp o quieres escribirnos tú mismo?</p>
+                <!-- CAMBIAR NÚMERO DE WHATSAPP AQUÍ: Cambia el '51949357095' en el 'href' por el número de tu clínica -->
+                <a href="https://wa.me/51949357095?text=Ya%20me%20agende%20,%20Gracias" target="_blank" class="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-green-600 text-white font-heading font-bold py-3 px-8 rounded-full transition shadow-lg w-full sm:w-auto">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Escribir a WhatsApp ahora
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Agendar Cita (Lead Capture) -->
-    <section id="citas" class="py-20 bg-primary relative overflow-hidden">
-        <!-- Decoración de fondo -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-secondary opacity-20"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-accent opacity-20"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border-4 border-white">
-                <!-- Información -->
-                <div class="bg-light p-10 md:w-2/5 flex flex-col justify-center border-r border-gray-200">
-                    <h3 class="font-heading text-3xl font-extrabold mb-4 text-primary">Agenda tu Cita Hoy</h3>
-                    <p class="mb-8 text-gray-600 font-medium">Completa el formulario y te conectaremos directamente por WhatsApp para confirmar tu horario ideal.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl text-accent shadow-sm border border-gray-100">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <p class="font-heading font-bold text-primary">Petit Thouars 3249</p>
-                                <p class="text-gray-600 text-sm">Lima, Perú (San Isidro)</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl text-accent shadow-sm border border-gray-100">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div>
-                                <p class="font-heading font-bold text-primary">Horario</p>
-                                <p class="text-gray-600 text-sm">Lunes a Sábado: 9AM - 8PM</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl text-accent shadow-sm border border-gray-100">
-                                <i class="fa-solid fa-phone-volume"></i>
-                            </div>
-                            <div>
-                                <p class="font-heading font-bold text-primary">¡Llámanos Ahora!</p>
-                                <p class="text-gray-600 text-sm">Atención rápida y personalizada.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="p-10 md:w-3/5 bg-white">
-                    <form id="appointmentForm" class="space-y-5" onsubmit="enviarWhatsApp(event)">
-                        <h4 class="font-heading text-2xl font-bold text-primary mb-6">Datos del Paciente</h4>
-                        
-                        <div>
-                            <label for="nombre" class="block text-sm font-bold text-grayBrand mb-1">Nombre Completo</label>
-                            <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:ring-0 focus:border-secondary transition outline-none font-medium text-gray-800" placeholder="Ej. Juan Pérez">
-                        </div>
-                        
-                        <div>
-                            <label for="telefono" class="block text-sm font-bold text-grayBrand mb-1">Número de Celular / WhatsApp</label>
-                            <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:ring-0 focus:border-secondary transition outline-none font-medium text-gray-800" placeholder="999 888 777">
-                        </div>
-
-                        <div>
-                            <label for="motivo" class="block text-sm font-bold text-grayBrand mb-1">Motivo de Consulta</label>
-                            <select id="motivo" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:ring-0 focus:border-secondary transition outline-none bg-white font-medium text-gray-800">
-                                <option value="" disabled selected>Selecciona un tratamiento...</option>
-                                <option value="Consulta Gratis (Diagnóstico)">Consulta Gratis (Diagnóstico)</option>
-                                <option value="Limpieza Dental / Profilaxis">Limpieza Dental / Profilaxis</option>
-                                <option value="Curación / Resina Estética">Curación / Resina Estética</option>
-                                <option value="Extracción">Extracción</option>
-                                <option value="Atención de Urgencias">Atención de Urgencias (Dolor)</option>
-                                <option value="Ortodoncia">Ortodoncia</option>
-                                <option value="Diseño de Sonrisa">Diseño de Sonrisa</option>
-                                <option value="Otro">Otro tratamiento</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="mensaje" class="block text-sm font-bold text-grayBrand mb-1">Comentario adicional (Opcional)</label>
-                            <textarea id="mensaje" rows="2" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:ring-0 focus:border-secondary transition outline-none resize-none font-medium text-gray-800" placeholder="Ej. Quisiera agendar para este sábado..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-heading font-extrabold text-lg py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-3 mt-4">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar a WhatsApp
-                        </button>
-                        <p class="text-xs text-center text-grayBrand mt-3 font-semibold"><i class="fa-solid fa-lock"></i> Tus datos están seguros. Serás redirigido a WhatsApp.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-12">
-                <div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Blog & Consejos</h2>
-                    <div class="w-24 h-1.5 bg-secondary rounded-full"></div>
-                </div>
-                <a href="#" class="hidden md:inline-flex items-center gap-2 text-accent font-bold hover:text-accentHover mt-4 md:mt-0 transition">
-                    Ver todos los artículos <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Articulo 1 -->
-                <article class="bg-light rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1590664095641-7fa05f689813?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Miedo al dentista" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-secondary uppercase tracking-wider">Salud Mental</span>
-                        <h3 class="font-heading text-xl font-bold text-primary mt-2 mb-3 leading-tight">Cómo perder el miedo al dentista con Sonrisín</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Sentir ansiedad antes de ir al dentista es muy común. En 3B Dental hemos diseñado un protocolo enfocado en la empatía y la confianza...</p>
-                        <a href="#" class="text-accent font-bold text-sm hover:underline">Leer más</a>
-                    </div>
-                </article>
-
-                <!-- Articulo 2 -->
-                <article class="bg-light rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Higiene bucal" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-secondary uppercase tracking-wider">Prevención</span>
-                        <h3 class="font-heading text-xl font-bold text-primary mt-2 mb-3 leading-tight">¿Por qué la profilaxis te ahorra dinero?</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Una limpieza profunda no solo mantiene tus dientes blancos. Eliminar el sarro a tiempo previene caries profundas que cuestan el triple de curar.</p>
-                        <a href="#" class="text-accent font-bold text-sm hover:underline">Leer más</a>
-                    </div>
-                </article>
-
-                <!-- Articulo 3 -->
-                <article class="bg-light rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resinas dentales" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-secondary uppercase tracking-wider">Estética</span>
-                        <h3 class="font-heading text-xl font-bold text-primary mt-2 mb-3 leading-tight">5 Consejos para cuidar tus curaciones de resina</h3>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Las resinas estéticas de alta calidad son duraderas, pero requieren cuidados. Evitar alimentos extremadamente duros o bebidas muy oscuras es clave.</p>
-                        <a href="#" class="text-accent font-bold text-sm hover:underline">Leer más</a>
-                    </div>
-                </article>
-            </div>
             
-            <a href="#" class="md:hidden block text-center w-full bg-light text-primary font-bold py-3 mt-8 rounded-xl border border-secondary/20 hover:bg-secondary/10 transition">
-                Ver todos los artículos
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white pt-16 pb-8 border-t-8 border-accent">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <!-- Marca -->
-                <div class="col-span-1 md:col-span-1">
-                    <a href="#" class="flex flex-col items-start mb-6 bg-white p-4 rounded-xl inline-block w-32">
-                        <div class="flex items-baseline gap-[2px]">
-                            <span class="font-heading font-extrabold text-3xl text-secondary leading-none">3</span>
-                            <span class="font-heading font-extrabold text-3xl text-accent leading-none">B</span>
-                        </div>
-                        <div class="smile-curve w-1/4 mb-1 border-secondary"></div>
-                        <span class="font-heading font-bold text-xl text-primary tracking-tight leading-none mt-1">DENTAL</span>
-                    </a>
-                    <p class="text-light/80 text-sm mb-6 font-medium">Calidad, confianza y sonrisas para todos. Odontología al precio justo en Lima.</p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent transition text-white"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent transition text-white"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center hover:bg-accent transition text-white"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
-
-                <!-- Enlaces Rápidos -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-4 border-b border-secondary/30 pb-2 text-accent">Enlaces Rápidos</h4>
-                    <ul class="space-y-2 text-sm text-light/80 font-medium">
-                        <li><a href="#inicio" class="hover:text-white hover:translate-x-1 inline-block transition">Inicio</a></li>
-                        <li><a href="#nosotros" class="hover:text-white hover:translate-x-1 inline-block transition">Nuestra Misión</a></li>
-                        <li><a href="#servicios" class="hover:text-white hover:translate-x-1 inline-block transition">Tratamientos</a></li>
-                        <li><a href="#blog" class="hover:text-white hover:translate-x-1 inline-block transition">Blog Dental</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contacto -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-4 border-b border-secondary/30 pb-2 text-accent">Contacto</h4>
-                    <ul class="space-y-4 text-sm text-light/80 font-medium">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
-                            <span>Av. Petit Thouars 3249, 3er Piso,<br>Distrito, Lima, Perú</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-secondary"></i>
-                            <span>+51 914 934 518</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-envelope text-secondary"></i>
-                            <span>citas@3bdental.pe</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Escanea y Agenda 
-                <div>
-                    <h4 class="font-heading font-bold text-lg mb-4 border-b border-secondary/30 pb-2 text-accent">Escanea y Agenda</h4>
-                    <div class="bg-white p-3 rounded-xl inline-block shadow-lg">
-                        <!-- Código QR Placeholder 
-                        <img src="qr911934.png" alt="Código QR para agendar cita" class="w-full h-full">
-                        <p class="text-primary text-[10px] font-bold text-center mt-2 uppercase">Escanear Aquí</p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="border-t border-secondary/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-light/60 font-medium">
-                <p>&copy; 2026 3B Dental. Todos los derechos reservados.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-white transition">Términos de Servicio</a>
-                    <a href="#" class="hover:text-white transition">Política de Privacidad</a>
-                </div>
+            <div class="mt-8 relative z-10">
+                <a href="https://beckercorp.github.io/3BDental/" class="text-primary hover:text-accent font-bold transition text-sm underline">Volver a la página principal</a>
             </div>
         </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="bg-white py-6 text-center text-sm text-gray-400 border-t border-gray-200 mt-auto">
+        <p>&copy; 2026 3B Dental. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Botón Flotante WhatsApp -->
-    <a href="#citas" class="fixed bottom-6 right-6 bg-whatsapp text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-500 hover:scale-110 transition-transform z-50 animate-bounce border-2 border-white">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-
-    <!-- Scripts -->
-    <script>
-        // Lógica del menú móvil
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Cerrar menú al hacer click en un enlace (Móvil)
-        const menuLinks = menu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Función para interceptar el formulario y enviarlo por WhatsApp
-        function enviarWhatsApp(event) {
-            event.preventDefault(); 
-
-            const numeroDestino = '51949357095'; 
-
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const motivo = document.getElementById('motivo').value;
-            const mensajeAdicional = document.getElementById('mensaje').value;
-
-            let texto = `¡Hola 3B Dental! 👋\nMi nombre es *${nombre}* y quisiera agendar una cita.\n\n`;
-            texto += `🦷 *Motivo de consulta:* ${motivo}\n`;
-            texto += `📱 *Mi número de contacto es:* ${telefono}\n`;
-            
-            if (mensajeAdicional.trim() !== '') {
-                texto += `\n💬 *Mensaje adicional:* ${mensajeAdicional}`;
-            }
-
-            const textoCodificado = encodeURIComponent(texto);
-            const urlWhatsApp = `https://wa.me/${numeroDestino}?text=${textoCodificado}`;
-
-            window.open(urlWhatsApp, '_blank');
-            document.getElementById('appointmentForm').reset();
-        }
-    </script>
 </body>
 </html>
